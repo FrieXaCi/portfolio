@@ -1,0 +1,39 @@
+#matrix {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 80vh;
+  background-color: $primair-background-color;
+  #backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+  #foregroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+}
+//
+// media querie mobile
+@media screen and (max-width: 480px) {
+  #matrix {
+    width: 100%;
+    height: 550px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  #matrix {
+    width: 90%;
+    height: 850px;
+  }
+}

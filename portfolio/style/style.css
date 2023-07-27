@@ -1,0 +1,1242 @@
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all ease-out 1.3s;
+}
+.menu-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: rgb(239, 187, 255);
+  transition: all ease-out 1.3s;
+}
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(0px, 6px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  display: none;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(0px, -6px);
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+}
+.navbar-container.show {
+  visibility: visible;
+  z-index: 10;
+}
+.navbar-container.show .menu-nav {
+  margin: 4rem auto;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  width: 60%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(60deg, rgb(239, 187, 255) 25%, rgb(33, 21, 34) 75%);
+  color: rgb(190, 41, 236);
+  text-shadow: 1px 1px 2px rgb(190, 41, 236);
+}
+.navbar-container.show .menu-nav .nav-item:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.navbar-container.show .menu-nav .nav-item:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.navbar-container.show .menu-nav .nav-item:nth-child(3) {
+  transition-delay: 0.9s;
+}
+.navbar-container.show .menu-nav .nav-item:nth-child(4) {
+  transition-delay: 1.2s;
+}
+.navbar-container.show .menu-nav .nav-item:nth-child(5) {
+  transition-delay: 1.5s;
+}
+.navbar-container .menu-nav {
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all ease-out 1.3s;
+}
+.navbar-container .menu-nav.show {
+  transform: translate3d(0, 0, 0);
+}
+.navbar-container .menu-nav .nav-item {
+  transform: translate3d(600px, 0, 0);
+  transition: all ease-out 1s;
+}
+.navbar-container .menu-nav .nav-item.show {
+  transform: translate3d(0, 0, 0);
+  transition: all ease-out 1.3s;
+}
+.navbar-container .menu-nav .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 1rem auto;
+  font-weight: 300;
+  transition: all ease-out 1.3s;
+  margin: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .menu-btn {
+    margin: 8px;
+    padding: 8px;
+    right: 0;
+    top: 0;
+  }
+  .menu-btn .btn-line {
+    width: 18px;
+    height: 2px;
+  }
+  .navbar-container .menu-nav .nav-link {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  .menu-btn {
+    margin: 20px;
+    padding: 8px;
+    right: 0;
+    top: 0;
+  }
+  .menu-btn .btn-line {
+    width: 18px;
+    height: 2px;
+  }
+  .navbar-container .menu-nav .nav-link {
+    font-size: 16px;
+  }
+}
+.about-container-mobile {
+  display: none;
+}
+
+.about-container-screen {
+  margin: 10px auto 50px auto;
+  width: 100%;
+  height: 100%;
+}
+.about-container-screen .container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-container-screen .container h2 {
+  margin-top: 50px;
+  font-size: 2rem;
+}
+.about-container-screen .container .box {
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-container-screen .container .clipped-text-about {
+  padding: 20px;
+  width: 990px;
+  height: 560px;
+  background: transparent;
+  text-align: justify;
+  position: relative;
+}
+.about-container-screen .container .clipped-text-about:before {
+  position: relative;
+  margin-left: 9rem;
+  content: "";
+  float: right;
+  width: 100%;
+  height: 560px;
+  background: url("../assets/frieda_about.jpg") center;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  shape-outside: polygon(100% 100%, 100% 0, 0 0);
+  clip-path: polygon(100% 100%, 100% 0, 0 0);
+  z-index: -1;
+}
+.about-container-screen .container .clipped-text-about-left {
+  padding: 20px;
+  width: 990px;
+  height: 560px;
+  background: transparent;
+  text-align: justify;
+  position: relative;
+}
+.about-container-screen .container .clipped-text-about-left:before {
+  position: relative;
+  margin-right: 9rem;
+  content: "";
+  background: url("../assets/homepage_amsterdam.jpg") center;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  float: left;
+  width: 80%;
+  height: 560px;
+  -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%);
+  shape-outside: polygon(0 0, 0 100%, 100% 100%);
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+.about-container-screen .container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  word-spacing: -1px;
+  color: rgb(239, 187, 255);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  .about-container-screen {
+    display: none;
+  }
+  .about-container-mobile {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 100%;
+    height: 100%;
+  }
+  .about-container-mobile .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-container-mobile .container h2 {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  .about-container-mobile .container .box {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-container-mobile .container .box-3 {
+    width: 320px;
+    margin-top: 25px;
+    padding: 20px;
+  }
+  .about-container-mobile .container .box-3 p {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    word-spacing: 1px;
+    color: rgb(239, 187, 255);
+    font-weight: 200;
+  }
+  .about-container-mobile .container .clipped-text-about-left {
+    padding: 20px;
+    width: 320px;
+    height: 350px;
+    background: transparent;
+    text-align: justify;
+    position: relative;
+  }
+  .about-container-mobile .container .clipped-text-about-left:before {
+    position: relative;
+    margin-left: 1rem;
+    content: "";
+    float: right;
+    width: 100%;
+    height: 290px;
+    background: url("../assets/frieda_raam.jpg") center;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    shape-outside: polygon(100% 100%, 100% 0, 0 0);
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    z-index: -1;
+  }
+  .about-container-mobile .container .clipped-text-about {
+    padding: 20px;
+    width: 320px;
+    height: 350px;
+    background: transparent;
+    text-align: justify;
+    position: relative;
+  }
+  .about-container-mobile .container .clipped-text-about:before {
+    position: relative;
+    margin-right: 2rem;
+    content: "";
+    background: url("../assets/homepage_amsterdam.jpg") center;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    float: left;
+    width: 80%;
+    height: 260px;
+    -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%);
+    shape-outside: polygon(0 0, 0 100%, 100% 100%);
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+  .about-container-mobile .container p {
+    font-size: 0.7rem;
+    line-height: 0.75rem;
+    color: rgb(239, 187, 255);
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 980px) {
+  .about-container-mobile {
+    display: none;
+  }
+  .about-container-screen .container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-container-screen .container h2 {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+  .about-container-screen .container .box {
+    margin-bottom: 10px;
+  }
+  .about-container-screen .container .clipped-text-about {
+    width: 600px;
+    height: 660px;
+  }
+  .about-container-screen .container .clipped-text-about:before {
+    position: relative;
+    margin-left: 7rem;
+    content: "";
+    float: right;
+    width: 100%;
+    height: 660px;
+    background: url("../assets/frieda_raam.jpg") center;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    shape-outside: polygon(100% 100%, 100% 0, 0 0);
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    z-index: -1;
+  }
+  .about-container-screen .container .clipped-text-about-left {
+    padding: 20px;
+    width: 600px;
+    height: 660px;
+    background: transparent;
+    text-align: justify;
+    position: relative;
+  }
+  .about-container-screen .container .clipped-text-about-left:before {
+    position: relative;
+    margin-right: 7rem;
+    content: "";
+    background: url("../assets/homepage_amsterdam.jpg") center;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    float: left;
+    width: 80%;
+    height: 660px;
+    -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%);
+    shape-outside: polygon(0 0, 0 100%, 100% 100%);
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+  .about-container-screen .container p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    word-spacing: -1px;
+    color: rgb(239, 187, 255);
+    font-weight: 400;
+  }
+}
+#matrix {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 80vh;
+  background-color: rgb(33, 21, 34);
+}
+#matrix #backgroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+#matrix #foregroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+  #matrix {
+    width: 100%;
+    height: 550px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  #matrix {
+    width: 90%;
+    height: 850px;
+  }
+}
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.portfolio-page .card-items {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  transition: all ease-out 1.3s;
+}
+.portfolio-page .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+.portfolio-page .card H2 {
+  font-size: 3.5rem;
+}
+.portfolio-page .card .portfolio-image-container {
+  width: 100%;
+  height: 450px;
+}
+.portfolio-page .card .portfolio-image-container img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-page .card .icon-container {
+  display: flex;
+  row-gap: 20px;
+}
+.portfolio-page .front,
+.portfolio-page .back {
+  background: rgb(216, 150, 255);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: all ease-out 1.3s;
+}
+.portfolio-page .front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px dotted rgb(190, 41, 236);
+}
+.portfolio-page .front h2 {
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+.portfolio-page .front h3 {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+.portfolio-page .front p {
+  margin-left: 10px;
+  color: rgb(33, 21, 34);
+  padding: 10px;
+  font-size: 1rem;
+}
+.portfolio-page .back {
+  z-index: 0;
+}
+.portfolio-page .back-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/matrix_1.png");
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+.portfolio-page .back-page h3 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgb(239, 187, 255);
+}
+.portfolio-page .back-page p {
+  background-color: rgb(239, 187, 255);
+  opacity: 0.7;
+  padding: 20px;
+  color: rgb(33, 21, 34);
+}
+.portfolio-page .front-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.portfolio-page .back-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+.portfolio-page .back-content .image-container {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+}
+.portfolio-page .back-content .image-container img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-page .back-content .image-container :hover {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all ease-out 1.3s;
+}
+.portfolio-page .back-content .item1 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(216, 150, 255);
+}
+.portfolio-page .back-content .item2 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(190, 41, 236);
+}
+.portfolio-page .back-content .item3 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(33, 21, 34);
+}
+.portfolio-page .back-content .item4 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(128, 0, 128);
+}
+.portfolio-page .back-content .item5 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(33, 21, 34);
+}
+.portfolio-page .back-content .item6 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(102, 0, 102);
+}
+.portfolio-page .back-content .item7 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(239, 187, 255);
+}
+.portfolio-page .back-content .item8 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(102, 0, 102);
+}
+.portfolio-page .back-content .item9 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: rgb(190, 41, 236);
+}
+.portfolio-page .flipped .front,
+.portfolio-page .flipped .back {
+  transform: rotateY(-180deg);
+}
+.portfolio-page #card0 {
+  z-index: 5;
+}
+.portfolio-page #card1 {
+  z-index: 4;
+}
+.portfolio-page #card2 {
+  z-index: 3;
+}
+.portfolio-page #card3 {
+  z-index: 2;
+}
+.portfolio-page #card4 {
+  z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-page {
+    height: 750px;
+    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .portfolio-page .card-items {
+    position: relative;
+    width: 340px;
+    height: 350px;
+    transition: all ease-out 1.3s;
+  }
+  .portfolio-page .card {
+    perspective: 800px;
+  }
+  .portfolio-page .card H2 {
+    height: 25px;
+    font-size: 1.2rem;
+  }
+  .portfolio-page .card .portfolio-image-container {
+    width: 320px;
+    height: 320px;
+  }
+  .portfolio-page .card .portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .portfolio-page .front,
+  .portfolio-page .back {
+    transform-origin: top;
+    transition: all ease-out 1.3s;
+  }
+  .portfolio-page .front {
+    border-left: 2px dotted rgb(190, 41, 236);
+  }
+  .portfolio-page .front h2 {
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 0.7rem;
+  }
+  .portfolio-page .front h3 {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+  .portfolio-page .front p {
+    margin-left: 5px;
+    color: rgb(33, 21, 34);
+    padding: 5px;
+    font-size: 0.5rem;
+  }
+  .portfolio-page .back {
+    z-index: 0;
+  }
+  .portfolio-page .back-page {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: rotateX(180deg);
+  }
+  .portfolio-page .back-page h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: rgb(239, 187, 255);
+  }
+  .portfolio-page .back-page p {
+    font-size: 0.7rem;
+    background-color: rgb(239, 187, 255);
+    opacity: 0.7;
+    padding: 20px;
+    color: rgb(33, 21, 34);
+  }
+  .portfolio-page .front-content {
+    gap: 1rem;
+  }
+  .portfolio-page .back-content {
+    transform: rotateY(180deg);
+  }
+  .portfolio-page .back-content .image-container {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    transform: rotate(-180deg);
+  }
+  .portfolio-page .back-content .image-container :hover {
+    width: 250px;
+    height: 250px;
+    transition: all ease-out 1.3s;
+  }
+  .portfolio-page .back-content .item1 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(33, 21, 34);
+  }
+  .portfolio-page .back-content .item2 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(190, 41, 236);
+  }
+  .portfolio-page .back-content .item3 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(33, 21, 34);
+  }
+  .portfolio-page .back-content .item4 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(128, 0, 128);
+  }
+  .portfolio-page .back-content .item5 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(33, 21, 34);
+  }
+  .portfolio-page .back-content .item6 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(102, 0, 102);
+  }
+  .portfolio-page .back-content .item7 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(239, 187, 255);
+  }
+  .portfolio-page .back-content .item8 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(102, 0, 102);
+  }
+  .portfolio-page .back-content .item9 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(33, 21, 34);
+  }
+  .portfolio-page .flipped .front,
+  .portfolio-page .flipped .back {
+    transform: rotateX(-180deg);
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  .portfolio-page {
+    height: auto;
+    margin: 5px auto;
+    gap: 20px;
+  }
+  .portfolio-page .card-items {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
+  .portfolio-page .card H2 {
+    font-size: 3rem;
+  }
+  .portfolio-page .front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 2px dotted rgb(190, 41, 236);
+  }
+  .portfolio-page .front h2 {
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 0.7rem;
+  }
+  .portfolio-page .front h3 {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+  .portfolio-page .front p {
+    margin-left: 5px;
+    color: rgb(33, 21, 34);
+    padding: 5px;
+    font-size: 0.5rem;
+  }
+  .portfolio-page .back-page {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .portfolio-page .back-page h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: rgb(239, 187, 255);
+  }
+  .portfolio-page .back-page p {
+    font-size: 0.7rem;
+    background-color: rgb(239, 187, 255);
+    opacity: 0.7;
+    padding: 20px;
+    color: rgb(33, 21, 34);
+  }
+  .portfolio-page .front-content {
+    gap: 1rem;
+  }
+  .portfolio-page .back-content .image-container {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+  }
+  .portfolio-page .back-content .item1 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(216, 150, 255);
+  }
+  .portfolio-page .back-content .item2 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(190, 41, 236);
+  }
+  .portfolio-page .back-content .item3 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(33, 21, 34);
+  }
+  .portfolio-page .back-content .item4 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: rgb(128, 0, 128);
+  }
+  .portfolio-page .back-content .item5 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+  }
+  .portfolio-page .back-content .item6 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+  }
+  .portfolio-page .back-content .item7 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+  }
+  .portfolio-page .back-content .item8 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+  }
+  .portfolio-page .back-content .item9 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: rgb(190, 41, 236);
+  background: linear-gradient(60deg, rgb(239, 187, 255) 10%, rgb(190, 41, 236) 20%, rgb(33, 21, 34) 75%);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(190, 41, 236);
+}
+
+a:hover {
+  color: rgb(33, 21, 34);
+}
+
+button {
+  margin: 20px;
+  width: 100px;
+  padding: 5px 8px;
+  background-color: rgb(190, 41, 236);
+  color: rgb(33, 21, 34);
+  border-radius: 7px;
+}
+
+footer {
+  width: 100%;
+  height: 2rem;
+  margin: 0.5rem auto;
+  text-align: center;
+  background-color: rgb(33, 21, 34);
+}
+
+.hide {
+  display: none;
+}
+
+#myBtn {
+  background: transparent;
+  height: 75px;
+  width: 75px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: rgb(216, 150, 255); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 0.5;
+}
+
+#myBtn:hover {
+  color: rgb(239, 187, 255);
+}
+
+#prev-btn,
+#next-btn {
+  background: transparent;
+  height: 75px;
+  width: 75px;
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: rgb(216, 150, 255); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 0.5;
+}
+#prev-btn :hover,
+#next-btn :hover {
+  color: rgb(239, 187, 255);
+}
+
+.header-homepage {
+  margin: 1rem auto;
+  text-align: center;
+  width: 100%;
+  height: 4.5rem;
+}
+.header-homepage h1 {
+  font-family: "Monoton", sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.page-title {
+  margin: 15px auto;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 3rem;
+  background: linear-gradient(to right, rgb(33, 21, 34) 5%, rgb(216, 150, 255) 80%, rgb(128, 0, 128) 20%, rgb(190, 41, 236) 25%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.homepage .main-title {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: rgb(216, 150, 255);
+}
+.homepage .main-title h1 {
+  background: rgb(239, 187, 255);
+  opacity: 0.7;
+  padding: 0 35px;
+  margin-top: 10px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.sub-title,
+.sub-title-3 {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.skills-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background: rgb(33, 21, 34);
+}
+.skills-page ul {
+  list-style: none;
+  display: inline-flex;
+  margin: 10px;
+}
+.skills-page ul li {
+  padding: 20px;
+}
+.skills-page ul li i {
+  margin: 5px;
+  padding: 5px;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+.contact-page h2 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.contact-page p {
+  margin-top: 10px;
+  width: 50%;
+  font-size: 1rem;
+}
+.contact-page .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+.contact-page .form-container ul {
+  list-style: none;
+}
+.contact-page .form-container ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-page .form-container ul li input {
+  background: rgb(128, 0, 128);
+  color: rgb(33, 21, 34);
+  height: 2rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  width: 700px;
+}
+.contact-page .form-container ul li textarea {
+  width: 700px;
+  height: 600px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background: rgb(33, 21, 34);
+  color: rgb(190, 41, 236);
+}
+
+@media screen and (max-width: 480px) {
+  .header-homepage {
+    height: 2rem;
+  }
+  .header-homepage h1 {
+    font-size: 1.2rem;
+  }
+  #myBtn,
+  #prev-btn,
+  #next-btn {
+    height: 30px;
+    width: 30px;
+    bottom: 5px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+  }
+  #myBtn i,
+  #prev-btn i,
+  #next-btn i {
+    font-size: 16px;
+  }
+  .homepage .main-title {
+    width: 100%;
+    height: 2.5rem;
+  }
+  .homepage .main-title h1 {
+    margin: 5px;
+    font-size: 0.8rem;
+  }
+  .page-title {
+    margin: 10px auto 5px auto;
+    font-size: 1.5rem;
+  }
+  .skills-page {
+    width: 320px;
+    height: 500px;
+  }
+  .skills-page ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skills-page ul li {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .skills-page ul li i {
+    font-size: 16px;
+  }
+  .contact-page h2 {
+    font-size: 0.8rem;
+  }
+  .contact-page p {
+    font-size: 0.7rem;
+  }
+  .contact-page .form-container ul {
+    list-style: none;
+  }
+  .contact-page .form-container ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-page .form-container ul li input {
+    height: 2rem;
+    width: 300px;
+    font-size: 0.9rem;
+  }
+  .contact-page .form-container ul li textarea {
+    width: 300px;
+    height: 400px;
+    font-size: 0.9rem;
+  }
+  footer {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  .header-homepage {
+    height: 2rem;
+  }
+  .header-homepage h1 {
+    font-size: 1.5rem;
+  }
+  #myBtn,
+  #prev-btn,
+  #next-btn {
+    height: 30px;
+    width: 30px;
+    bottom: 5px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+  }
+  #myBtn i,
+  #prev-btn i,
+  #next-btn i {
+    font-size: 16px;
+  }
+  .homepage .main-title {
+    width: 90%;
+  }
+  .homepage .main-title h1 {
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+  .page-title {
+    margin: 10px auto 5px auto;
+    font-size: 1.5rem;
+  }
+  .skills-page {
+    width: 320px;
+    height: 500px;
+  }
+  .skills-page ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skills-page ul li {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .skills-page ul li i {
+    font-size: 16px;
+  }
+  .contact-page h2 {
+    font-size: 0.9rem;
+  }
+  .contact-page p {
+    font-size: 0.7rem;
+  }
+  .contact-page .form-container ul {
+    list-style: none;
+  }
+  .contact-page .form-container ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-page .form-container ul li input {
+    height: 2rem;
+    width: 300px;
+    font-size: 0.9rem;
+  }
+  .contact-page .form-container ul li textarea {
+    width: 300px;
+    height: 400px;
+    font-size: 0.9rem;
+  }
+  footer {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

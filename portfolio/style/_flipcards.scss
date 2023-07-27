@@ -1,0 +1,442 @@
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .card-items {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    @include transition;
+  }
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    H2 {
+      font-size: 3.5rem;
+    }
+    .portfolio-image-container {
+      width: 100%;
+      height: 450px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .icon-container {
+      display: flex;
+      row-gap: 20px;
+    }
+  }
+  .front,
+  .back {
+    background: $tri-background-color;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    @include transition;
+  }
+  .front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px dotted $primair-color;
+    h2 {
+      margin-top: 30px;
+      margin-left: 10px;
+      font-size: 1.5rem;
+    }
+    h3 {
+      margin-left: 10px;
+      padding: 10px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-left: 10px;
+      color: $primair-background-color;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  .back {
+    z-index: 0;
+  }
+  .back-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/matrix_1.png');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    h3 {
+      margin-top: 100px;
+      text-align: center;
+      font-size: 1.3rem;
+      color: $tri-color;
+    }
+    p {
+      background-color: $tri-color;
+      opacity: 0.7;
+      padding: 20px;
+      color: $primair-background-color;
+    }
+  }
+  .front-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .back-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    .image-container {
+      margin: 5px;
+      width: 190px;
+      height: 190px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      :hover {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include transition;
+      }
+    }
+
+    .item1 {
+      @include portfolio-items;
+      background: $tri-background-color;
+    }
+    .item2 {
+      @include portfolio-items;
+      background: $primair-color;
+    }
+    .item3 {
+      @include portfolio-items;
+      background: $primair-background-color;
+    }
+    .item4 {
+      @include portfolio-items;
+      background: $secund-color;
+    }
+    .item5 {
+      @include portfolio-items;
+      background: $primair-background-color;
+    }
+    .item6 {
+      @include portfolio-items;
+      background: $secund-background-color;
+    }
+    .item7 {
+      @include portfolio-items;
+      background: $tri-color;
+    }
+    .item8 {
+      @include portfolio-items;
+      background: $secund-background-color;
+    }
+    .item9 {
+      @include portfolio-items;
+      background: $primair-color;
+    }
+
+    transform: rotateY(180deg);
+  }
+  // card flipped
+  .flipped .front,
+  .flipped .back {
+    transform: rotateY(-180deg);
+  }
+
+  // card order
+  #card0 {
+    z-index: 5;
+  }
+  #card1 {
+    z-index: 4;
+  }
+  #card2 {
+    z-index: 3;
+  }
+  #card3 {
+    z-index: 2;
+  }
+  #card4 {
+    z-index: 1;
+  }
+}
+//
+// media querie mobile
+@media screen and (max-width: 480px) {
+  .portfolio-page {
+    height: 750px;
+    margin: 10px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card-items {
+      position: relative;
+      width: 340px;
+      height: 350px;
+      @include transition;
+    }
+    .card {
+      perspective: 800px;
+      H2 {
+        height: 25px;
+        font-size: 1.2rem;
+      }
+      .portfolio-image-container {
+        width: 320px;
+        height: 320px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .front,
+    .back {
+      transform-origin: top;
+      @include transition;
+    }
+    .front {
+      border-left: 2px dotted $primair-color;
+      h2 {
+        margin-top: 10px;
+        margin-left: 4px;
+        font-size: 0.7rem;
+      }
+      h3 {
+        margin-left: 5px;
+        padding: 5px;
+        font-size: 0.6rem;
+      }
+      p {
+        margin-left: 5px;
+        color: $primair-background-color;
+        padding: 5px;
+        font-size: 0.5rem;
+      }
+    }
+    .back {
+      z-index: 0;
+    }
+    .back-page {
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      h3 {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 0.7rem;
+        color: $tri-color;
+      }
+      p {
+        font-size: 0.7rem;
+        background-color: $tri-color;
+        opacity: 0.7;
+        padding: 20px;
+        color: $primair-background-color;
+      }
+
+      transform: rotateX(180deg);
+    }
+    .front-content {
+      gap: 1rem;
+    }
+    .back-content {
+      .image-container {
+        margin: 2px;
+        width: 95px;
+        height: 95px;
+        transform: rotate(-180deg);
+
+        :hover {
+          width: 250px;
+          height: 250px;
+
+          @include transition;
+        }
+      }
+
+      .item1 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .item2 {
+        @include portfolio-items-small;
+        background: $primair-color;
+      }
+      .item3 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .item4 {
+        @include portfolio-items-small;
+        background: $secund-color;
+      }
+      .item5 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .item6 {
+        @include portfolio-items-small;
+        background: $secund-background-color;
+      }
+      .item7 {
+        @include portfolio-items-small;
+        background: $tri-color;
+      }
+      .item8 {
+        @include portfolio-items-small;
+        background: $secund-background-color;
+      }
+      .item9 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+
+      transform: rotateY(180deg);
+    }
+    // card flipped
+    .flipped .front,
+    .flipped .back {
+      transform: rotateX(-180deg);
+    }
+  }
+}
+//
+// media querie tablet
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  .portfolio-page {
+    height: auto;
+    margin: 5px auto;
+
+    gap: 20px;
+    .card-items {
+      position: relative;
+      width: 350px;
+      height: 350px;
+    }
+    .card {
+      H2 {
+        font-size: 3rem;
+      }
+    }
+
+    .front {
+      z-index: 1;
+      backface-visibility: hidden;
+      border-left: 2px dotted $primair-color;
+      h2 {
+        margin-top: 10px;
+        margin-left: 4px;
+        font-size: 0.7rem;
+      }
+      h3 {
+        margin-left: 5px;
+        padding: 5px;
+        font-size: 0.6rem;
+      }
+      p {
+        margin-left: 5px;
+        color: $primair-background-color;
+        padding: 5px;
+        font-size: 0.5rem;
+      }
+    }
+
+    .back-page {
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      h3 {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 0.7rem;
+        color: $tri-color;
+      }
+      p {
+        font-size: 0.7rem;
+        background-color: $tri-color;
+        opacity: 0.7;
+        padding: 20px;
+        color: $primair-background-color;
+      }
+    }
+    .front-content {
+      gap: 1rem;
+    }
+    .back-content {
+      .image-container {
+        margin: 2px;
+        width: 95px;
+        height: 95px;
+      }
+
+      .item1 {
+        @include portfolio-items-small;
+        background: $tri-background-color;
+      }
+      .item2 {
+        @include portfolio-items-small;
+        background: $primair-color;
+      }
+      .item3 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .item4 {
+        @include portfolio-items-small;
+        background: $secund-color;
+      }
+      .item5 {
+        @include portfolio-items-small;
+      }
+      .item6 {
+        @include portfolio-items-small;
+      }
+      .item7 {
+        @include portfolio-items-small;
+      }
+      .item8 {
+        @include portfolio-items-small;
+      }
+      .item9 {
+        @include portfolio-items-small;
+      }
+    }
+  }
+}

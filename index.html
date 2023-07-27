@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="HTML, CSS, Javascript, React" />
+    <meta name="keyword" content="HTML, CSS, Javascript, React" />
+    <meta name="author" content="Frieda Haringsma XaCi-development" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/196daf2361.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./portfolio/style/style.css" />
+    <script type="module" src="./portfolio/script/script.js" defer></script>
+    <script type="module" src="./portfolio/script/matrix.js" defer></script>
+    <script type="module" src="./portfolio/script/flipcard.js" defer></script>
+    <title>Portfolio XaCi Development</title>
+  </head>
+  <body>
+    <header class="header-homepage">
+      <h1>XaCi-Development</h1>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="navbar-container">
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#homepage"> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutme"> About </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills"> Skills </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio"> Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Homepage section-->
+      <section class="homepage">
+        <div id="homepage" class="main-title">
+          <h1>Makes the magic between code and design happen</h1>
+        </div>
+
+        <div id="matrix">
+          <canvas id="backgroundCanvas"></canvas>
+          <canvas id="foregroundCanvas"></canvas>
+        </div>
+        <button id="myBtn" title="Go to top">
+          <i class="fa-solid fa-angles-up fa-2xl"></i>
+        </button>
+      </section>
+
+      <!-- About me section-->
+      <h2 id="aboutme" class="page-title">About me</h2>
+      <h2 class="sub-title">Frieda Haringsma</h2>
+      <h4 class="sub-title-3">Frontend Developer</h4>
+      <section class="about-container-screen">
+        <article class="container">
+          <h2 id="aboutme">Frontend development && Design.</h2>
+
+          <div class="box">
+            <p class="clipped-text-about">
+              Na jarenlang werkzaam te zijn geweest als helpdeskmedewerker, is
+              het nu tijd om mijn creativiteit te combineren met mijn passie
+              voor het ontwikkelen van websites en apps. Met mijn kennis van
+              HTML, React, CSS, Sass en JavaScript ben ik in staat om mooie en
+              goedwerkende websites en apps te bouwen, met speciale aandacht
+              voor een fijne gebruikerservaring. Mijn ervaring in de
+              helpdeskwereld heeft me geleerd wat bezoekers van een website of
+              app verwachten en waarderen. Mijn doel is om jouw wensen en
+              ontwerp tot leven te brengen en een website of app te leveren die
+              niet alleen aan jouw eisen voldoet, maar ook een prettige ervaring
+              biedt aan jouw bezoekers.
+            </p>
+          </div>
+          <div class="box">
+            <p class="clipped-text-about-left">
+              Of je nu op zoek bent naar een website met een strakke lay-out en
+              moderne uitstraling, specifieke functionaliteiten nodig hebt om
+              jouw online doelen te bereiken, of unieke ideeën hebt die je wilt
+              verwezenlijken, dan sta ik met plezier voor je klaar om jouw
+              concept om te zetten in een prachtige en gebruiksvriendelijke
+              website. Als ervaren ontwikkelaar beschik ik over de vaardigheden
+              om jouw website te voorzien van een aantrekkelijk ontwerp dat
+              perfect past bij jouw merk of boodschap. Naast het aspect van
+              design, besteed ik ook veel aandacht aan het creëren van een
+              optimale gebruikerservaring, zodat bezoekers moeiteloos kunnen
+              navigeren en optimaal kunnen genieten van jouw website. Twijfel
+              niet langer en neem vandaag nog contact met me op. Samen kunnen we
+              onze krachten bundelen om jouw ideeën werkelijkheid te maken. Ik
+              sta klaar om een mooie website te ontwikkelen waarmee we zorgen
+              voor een optimale gebruikerservaring en je trots kunt uitdragen
+              wie je bent en wat je doet.
+            </p>
+          </div>
+        </article>
+      </section>
+      <!-- about me mobile version -->
+      <section class="about-container-mobile">
+        <article class="container">
+          <h2 id="aboutme">Frontend development && Design.</h2>
+
+          <div class="box">
+            <p class="clipped-text-about">
+              Na jarenlang werkzaam te zijn geweest als helpdeskmedewerker, is
+              het nu tijd om mijn creativiteit te combineren met mijn passie
+              voor het ontwikkelen van websites en apps. Met mijn kennis van
+              HTML, React, CSS, Sass en JavaScript ben ik in staat om mooie en
+              goedwerkende websites en apps te bouwen, met speciale aandacht
+              voor een fijne gebruikerservaring. Mijn ervaring in de
+              helpdeskwereld heeft me geleerd wat bezoekers van een website of
+              app verwachten en waarderen.
+            </p>
+          </div>
+          <div class="box">
+            <p class="clipped-text-about-left">
+              Mijn doel is om jouw wensen en ontwerp tot leven te brengen en een
+              website of app te leveren die niet alleen aan jouw eisen voldoet,
+              maar ook een prettige ervaring biedt aan jouw bezoekers. Of je nu
+              op zoek bent naar een website met een strakke lay-out en moderne
+              uitstraling, specifieke functionaliteiten nodig hebt om jouw
+              online doelen te bereiken, of unieke ideeën hebt die je wilt
+              verwezenlijken, dan sta ik met plezier voor je klaar om jouw
+              concept om te zetten in een prachtige website.
+            </p>
+          </div>
+          <div class="box-3">
+            <p>
+              Als ervaren ontwikkelaar beschik ik over de vaardigheden om jouw
+              website te voorzien van een aantrekkelijk ontwerp dat perfect past
+              bij jouw merk of boodschap. Naast het aspect van design, besteed
+              ik ook veel aandacht aan het creëren van een optimale
+              gebruikerservaring, zodat bezoekers moeiteloos kunnen navigeren en
+              optimaal kunnen genieten van jouw website. Twijfel niet langer en
+              neem vandaag nog contact met me op. Samen kunnen we onze krachten
+              bundelen om jouw ideeën werkelijkheid te maken. Ik sta klaar om
+              een mooie website te ontwikkelen waarmee we zorgen voor een
+              optimale gebruikerservaring en je trots kunt uitdragen wie je bent
+              en wat je doet.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Skills section-->
+      <h2 id="skills" class="page-title">Skills</h2>
+      <section class="skills-page">
+        <h2>Technical skills</h2>
+        <ul class="tech-skills">
+          <li><i class="fa-brands fa-html5 fa-2xl"></i>HTML5</li>
+          <li><i class="fa-brands fa-css3-alt fa-2xl"></i>CSS3</li>
+          <li><i class="fa-brands fa-js fa-2xl"></i>Javascript</li>
+          <li><i class="fa-brands fa-sass fa-2xl"></i>Sass</li>
+          <li><i class="fa-brands fa-react fa-2xl"></i>React</li>
+          <li><i class="fa-brands fa-wordpress fa-2xl"></i>WordPress</li>
+        </ul>
+        <h2>Tools i use</h2>
+        <ul>
+          <li><i class="fa-brands fa-npm fa-2xl"></i>NPM</li>
+          <li><i class="fa-brands fa-git fa-2xl"></i>Git</li>
+          <li><i class="fa-brands fa-github fa-2xl"></i>Github</li>
+          <li><i class="fa-brands fa-figma fa-2xl"></i>Figma</li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+
+      <!-- Portfolio section-->
+      <h2 id="portfolio" class="page-title">My Portfolio</h2>
+      <section class="portfolio-page">
+        <div id="flipcard" class="card-items">
+          <section id="card1" class="card">
+            <section class="front">
+              <section id="f1" class="front-content">
+                <h2>Projects</h2>
+                <section class="portfolio-image-container">
+                  <img src="./portfolio/assets/matrix.png" />
+                </section>
+              </section>
+            </section>
+            <section class="back">
+              <section id="b1" class="back-content">
+                <section class="image-container item1">
+                  <img
+                    src="./portfolio/assets/catcalender_1.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="item2"></section>
+                <section class="item3"></section>
+                <section class="item4"></section>
+                <section class="image-container item5">
+                  <img
+                    src="./portfolio/assets/catcalender_2.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="item6"></section>
+                <section class="item7"></section>
+                <section class="item8"></section>
+                <section class="image-container item9">
+                  <img
+                    src="./portfolio/assets/catcalender_3.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+              </section>
+            </section>
+          </section>
+          <section id="card2" class="card">
+            <section class="front">
+              <section id="f2" class="front-content">
+                <h3>Winc event page</h3>
+                <p>
+                  Eindopdracht frontend development, gemaakt voor WincAcademy.
+                  Tijdens deze opdracht heb ik mijn vaardigheden in HTML, CSS,
+                  React en Sass toegepast. Ik heb een dynamische en interactieve
+                  gebruikersinterface ontwikkeld door gebruik te maken van HTML
+                  voor de structuur, CSS voor het ontwerp en Sass voor
+                  gestructureerde en herbruikbare stijling. Ik ben blij te
+                  kunnen melden dat ik mijn cursus succesvol heb afgerond met
+                  goede resultaten. Ik kijk ernaar uit om mijn kennis en
+                  vaardigheden verder te ontwikkelen in toekomstige projecten.
+                </p>
+                <section class="icon-container">
+                  <p><i class="fa-brands fa-react fa-lg"></i>React</p>
+                  <p><i class="fa-brands fa-sass fa-lg"></i>Sass</p>
+                </section>
+                <p>
+                  Wil je meer informatie? Klik op Video-demo om een live
+                  demonstratie van het project te bekijken, of gebruik de GitHub
+                  knop om toegang te krijgen tot de broncode.
+                </p>
+                <section class="btn-container">
+                  <a
+                    href="https://www.youtube.com/watch?v=42qYb3WVA30"
+                    target="_blank"
+                  >
+                    <button class="btn-website">Video-demo</button>
+                  </a>
+                  <a
+                    href="https://github.com/FrieXaCi/winc-event-page"
+                    target="_blank"
+                  >
+                    <button class="btn-github">GitHub</button>
+                  </a>
+                </section>
+              </section>
+            </section>
+            <section class="back">
+              <section id="b2" class="back-content">
+                <section class="item1"></section>
+                <section class="item2"></section>
+                <section class="image-container item3">
+                  <img
+                    src="./portfolio/assets/recipeapp_3.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="image-container item4">
+                  <img
+                    src="./portfolio/assets/recipeapp_2.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="item5"></section>
+                <section class="item6"></section>
+                <section class="item7"></section>
+                <section class="image-container item8">
+                  <img
+                    src="./portfolio/assets/recipeapp_1.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="item9"></section>
+              </section>
+            </section>
+          </section>
+          <section id="card3" class="card">
+            <section class="front">
+              <section id="f3" class="front-content">
+                <h3>Winc Recipe App</h3>
+                <p>
+                  Recipe-app basis-react opdracht voor WincAcademy. Het project
+                  "Recipe-app basis-react" is een opdracht die ik heb voltooid
+                  tijdens mijn tijd bij WincAcademy. Dit project was bedoeld om
+                  mijn vaardigheden in React verder te ontwikkelen en meer
+                  bekendheid te krijgen met het Chakra UI CSS-framework. Ik heb
+                  geleerd hoe ik React kan gebruiken om dynamische
+                  webapplicaties te bouwen en hoe ik de CSS-styling van Chakra
+                  UI kan toepassen om een aantrekkelijke en responsieve
+                  gebruikersinterface te creëren.
+                </p>
+                <section class="icon-container">
+                  <p><i class="fa-brands fa-react fa-lg"></i>React</p>
+                  <p>Chakra UI</p>
+                </section>
+                <p>
+                  Wil je meer informatie? Klik op Website om een live
+                  demonstratie van het project te bekijken, of gebruik de GitHub
+                  knop om toegang te krijgen tot de broncode.
+                </p>
+                <section class="btn-container">
+                  <a
+                    href="https://winc-recipe-app.netlify.app/"
+                    target="_blank"
+                  >
+                    <button class="btn-website">Website</button>
+                  </a>
+                  <a
+                    href="https://github.com/FrieXaCi/winc-academy-recipe-app"
+                    target="_blank"
+                  >
+                    <button class="btn-github">GitHub</button>
+                  </a>
+                </section>
+              </section>
+            </section>
+            <section class="back">
+              <section id="b3" class="back-content">
+                <section class="item1"></section>
+                <section class="item2"></section>
+                <section class="image-container item1">
+                  <img
+                    src="./portfolio/assets/xaci_1.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="item4"></section>
+                <section class="image-container item5">
+                  <img
+                    src="./portfolio/assets/xaci_2.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+                <section class="item6"></section>
+                <section class="item7"></section>
+                <section class="item8"></section>
+                <section class="image-container item9">
+                  <img
+                    src="./portfolio/assets/xaci_3.png"
+                    alt="xaci-development-portfolio"
+                  />
+                </section>
+              </section>
+            </section>
+          </section>
+          <section id="card4" class="card">
+            <section class="front">
+              <section id="f4" class="front-content">
+                <h3>XaCi-Development</h3>
+                <p>
+                  Ik heb een portfolio gemaakt met behulp van JavaScript, HTML
+                  en Sass om mijn vaardigheden te laten zien. Met JavaScript heb
+                  ik interactieve functies toegevoegd en met HTML de structuur
+                  van de pagina opgebouwd. Door Sass te gebruiken kon ik de
+                  styling gestructureerd en herbruikbaar maken. Het resultaat is
+                  een portfolio waarmee ik mijn werk en capaciteiten
+                  overzichtelijk kan presenteren.
+                </p>
+                <section class="icon-container">
+                  <p><i class="fa-brands fa-html5 fa-lg"></i>HTML</p>
+                  <p><i class="fa-brands fa-sass fa-lg"></i>Sass</p>
+                  <p><i class="fa-brands fa-square-js fa-lg"></i>Javascript</p>
+                </section>
+                <p>
+                  Wil je meer informatie? Klik op Website om een live
+                  demonstratie van het project te bekijken, of gebruik de GitHub
+                  knop om toegang te krijgen tot de broncode.
+                </p>
+                <section class="btn-container">
+                  <a href="#" target="_blank">
+                    <button class="btn-website">Website</button>
+                  </a>
+                  <a
+                    href="https://github.com/FrieXaCi/portfolio"
+                    target="_blank"
+                  >
+                    <button class="btn-github">GitHub</button>
+                  </a>
+                </section>
+              </section>
+            </section>
+            <section class="back">
+              <section id="b4" class="back-page">
+                <h3>Wil je meer zien?</h3>
+                >
+                <p>
+                  Voor een uitgebreid overzicht van mijn werkervaring en meer
+                  informatie over mij nodig ik je uit om mijn CV te downloaden.
+                  Hierin vind je gedetailleerde informatie over mijn
+                  achtergrond, vaardigheden en eerdere werkervaring. Voor een
+                  overzicht van mijn projecten en bijdragen kun je ook een
+                  kijkje nemen op mijn GitHub-pagina. Ontdek en verken mijn werk
+                  op GitHub en download mijn CV voor een completer beeld.
+                </p>
+                <section class="btn-container">
+                  <a
+                    href="./portfolio/assets/CV Frieda Haringsma Frontend developer.pdf"
+                    download
+                  >
+                    <button class="btn-website">CV</button>
+                  </a>
+                  <a href="https://github.com/FrieXaCi" target="_blank">
+                    <button class="btn-github">GitHub</button>
+                  </a>
+                </section>
+              </section>
+            </section>
+          </section>
+        </div>
+        <section class="btn-container">
+          <button id="prev-btn">
+            <i class="fa-solid fa-angles-left fa-2xl"></i>
+          </button>
+          <button id="next-btn">
+            <i class="fa-solid fa-angles-right fa-2xl"></i>
+          </button>
+        </section>
+      </section>
+      <!-- contact section-->
+      <h2 id="contact" class="page-title">contact</h2>
+      <section class="contact-page">
+        <h2>Welkom op mijn contactpagina!</h2>
+        <p>
+          Als je vragen hebt, opmerkingen wilt delen of geïnteresseerd bent in
+          een mogelijke samenwerking, aarzel dan niet om mij een bericht te
+          sturen. Ik sta open voor nieuwe mogelijkheden en kijk uit naar jouw
+          bericht. Wil je ook mijn CV bekijken? Dan kun je deze eenvoudig
+          downloaden via de beschikbare link.
+        </p>
+        <a
+          href="./portfolio/assets/CV Frieda Haringsma Frontend developer.pdf"
+          download
+        >
+          <button class="btn-website">Download CV</button>
+        </a>
+        <form
+          class="form-container"
+          action="'https://formsubmit.co/f.haringsma@xaci-development.com"
+          method
+          post
+        >
+          <ul>
+            <li>
+              <label for="name">Naam:</label>
+              <input type="text" name="'name" id="name" required />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" name="'email" id="email" required />
+            </li>
+            <li>
+              <label for="onderwerp">Onderwerp:</label>
+              <input type="text" name="'onderwerp" id="onderwerp" required />
+            </li>
+            <li>
+              <label for="bericht">Bericht:</label>
+              <textarea name="bericht" id="bericht"></textarea>
+            </li>
+          </ul>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <h4>copyright 2023 by XaCi-development</h4>
+    </footer>
+  </body>
+</html>

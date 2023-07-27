@@ -1,0 +1,126 @@
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include transition;
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $tri-color;
+    @include transition;
+  }
+  // rotate btn to X
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(0px, 6px);
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(0px, -6px);
+      }
+    }
+  }
+}
+// menu overlay
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+    z-index: 10;
+    .menu-nav {
+      margin: 4rem auto;
+      padding: 0;
+      display: flex;
+      flex-flow: column wrap;
+      width: 60%;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        60deg,
+        $tri-color 25%,
+        $primair-background-color 75%
+      );
+      color: $primair-color;
+      text-shadow: 1px 1px 2px $primair-color;
+      @for $x from 1 through 5 {
+        .nav-item:nth-child(#{$x}) {
+          transition-delay: $x * 0.3s;
+        }
+      }
+    }
+  }
+  .menu-nav {
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include transition;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .nav-item {
+      transform: translate3d(600px, 0, 0);
+      transition: all ease-out 1s;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+        @include transition;
+      }
+    }
+    .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 1rem auto;
+      font-weight: 300;
+      @include transition;
+      margin: 10px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu-btn {
+    margin: 8px;
+    padding: 8px;
+    right: 0;
+    top: 0;
+    .btn-line {
+      width: 18px;
+      height: 2px;
+    }
+  }
+  .navbar-container .menu-nav .nav-link {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  .menu-btn {
+    margin: 20px;
+    padding: 8px;
+    right: 0;
+    top: 0;
+    .btn-line {
+      width: 18px;
+      height: 2px;
+    }
+  }
+  .navbar-container .menu-nav .nav-link {
+    font-size: 16px;
+  }
+}
