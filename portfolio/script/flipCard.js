@@ -47,19 +47,20 @@ const nextCard = () => {
       case 1:
         openCard();
         card1.classList.add('flipped');
-        card1.style.zIndex = 1;
+        card1.style.zIndex = 2;
         break;
       case 2:
         card2.classList.add('flipped');
-        card2.style.zIndex = 2;
+        card3.style.zIndex = 3;
         break;
       case 3:
         card3.classList.add('flipped');
-        card3.style.zIndex = 3;
+        card4.style.zIndex = 4;
         break;
       case 4:
         card4.classList.add('flipped');
-        card4.style.zIndex = 4;
+        card1.style.zIndex = 1;
+
         closeCard(false);
         break;
       default:
@@ -75,19 +76,20 @@ const prevCard = () => {
         closeCard(true);
         card1.classList.remove('flipped');
         card1.style.zIndex = 4;
+        card2.style.zIndex = 3;
         break;
       case 3:
         card2.classList.remove('flipped');
-        card2.style.zIndex = 3;
+        card3.style.zIndex = 2;
         break;
       case 4:
         card3.classList.remove('flipped');
-        card3.style.zIndex = 2;
+        card4.style.zIndex = 1;
         break;
       case 5:
         openCard();
         card4.classList.remove('flipped');
-        card4.style.zIndex = 1;
+        card4.style.zIndex = 4;
         break;
       default:
         throw new Error('er gaat iets niet goed nie');
