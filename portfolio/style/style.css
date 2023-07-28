@@ -588,9 +588,6 @@
 .portfolio-page .flipped .back {
   transform: rotateY(-180deg);
 }
-.portfolio-page #card0 {
-  z-index: 5;
-}
 .portfolio-page #card1 {
   z-index: 4;
 }
