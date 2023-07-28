@@ -268,7 +268,7 @@
         color: $primair-background-color;
       }
 
-      transform: rotateX(180deg);
+      transform: rotateX(-180deg);
     }
     .front-content {
       gap: 1rem;
@@ -325,12 +325,12 @@
         background: $primair-background-color;
       }
 
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
     }
     // card flipped
     .flipped .front,
     .flipped .back {
-      transform: rotateX(-180deg);
+      transform: rotateX(180deg);
     }
   }
 }

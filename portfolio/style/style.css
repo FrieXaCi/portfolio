@@ -661,7 +661,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    transform: rotateX(180deg);
+    transform: rotateX(-180deg);
   }
   .portfolio-page .back-page h3 {
     margin-top: 10px;
@@ -680,7 +680,7 @@
     gap: 1rem;
   }
   .portfolio-page .back-content {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   .portfolio-page .back-content .image-container {
     margin: 2px;
@@ -749,7 +749,7 @@
   }
   .portfolio-page .flipped .front,
   .portfolio-page .flipped .back {
-    transform: rotateX(-180deg);
+    transform: rotateX(180deg);
   }
 }
 @media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
