@@ -1,13 +1,18 @@
-
-
- <?php
-$to = "f.haringsma@xaci-development.com";
-$subject = "Test e-mail";
-$message = "Dit is een test e-mail.";
-$headers = "From: f.haringsma@xaci-development.com";
-if (mail($to, $subject, $message, $headers)) {
-    echo "E-mail verzonden!";
-} else {
-    echo "Er is een fout opgetreden bij het verzenden van de e-mail.";
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $naam = $_POST["naam"];
+    $email = $_POST["email"];
+    $onderwerp = $_POST["onderwerp"];
+    $bericht = $_POST["bericht"];
+    
+    // Verzend e-mail met ingevulde gegevens
+    $to = "f.haringsma@xaci-development.com";
+    $subject = "Contactformulier ingevuld";
+    $message = "Naam: " . $naam . "\n";
+    $message .= "E-mail: " . $email . "\n";
+    $message .= "Onderwerp: " . $onderwerp . "\n";
+    $message .= "Bericht: " . $bericht . "\n";
+    mail($to, $subject, $message);
 }
 ?>
+
