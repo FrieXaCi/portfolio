@@ -19,14 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<p>Je bericht is succesvol verzonden.</p>';
         echo '<p>We nemen zo snel mogelijk contact met je op.</p>';
         // Redirect naar de homepage na 3 seconden
-        header("refresh:3;url=#homepage");
+        header("refresh:3;url=https://www.xaci-development.com/");
         exit();
     } else {
         // Foutmelding bij het verzenden van de e-mail
         echo '<h1>Fout!</h1>';
         echo '<p>Er is een fout opgetreden bij het verzenden van je bericht. Probeer het later opnieuw.</p>';
         // Redirect naar de homepage na 3 seconden
-        header("refresh:3;url=#homepage");
+        header("refresh:3;url=https://www.xaci-development.com/");
         exit();
     }
 }
