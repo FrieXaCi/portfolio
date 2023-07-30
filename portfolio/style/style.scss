@@ -46,6 +46,7 @@ button {
   background-color: $primair-color;
   color: $primair-background-color;
   border-radius: 7px;
+  cursor: pointer;
 }
 footer {
   width: 100%;
@@ -53,6 +54,9 @@ footer {
   margin: 0.5rem auto;
   text-align: center;
   background-color: $primair-background-color;
+  :hover {
+    color: $tri-color;
+  }
 }
 .hide {
   display: none;
@@ -143,7 +147,7 @@ footer {
     background-color: $tri-color;
     h1 {
       opacity: 0.7;
-      padding: 0 35px;
+      padding: 5px;
       margin: 10px auto;
       font-size: 2rem;
       color: $primair-background-color;
@@ -191,7 +195,7 @@ footer {
 
 .contact-page {
   @include container;
-  margin-top: 15px;
+  margin: 15px auto;
   width: 100%;
   height: auto;
   background-color: black;
@@ -215,9 +219,10 @@ footer {
         @include container;
 
         input {
-          background: $secund-color;
+          padding: 5px;
+          background: $primair-color;
           color: $primair-background-color;
-          height: 2rem;
+          height: 2.2rem;
           font-size: 1rem;
           font-family: $text;
           width: 700px;
@@ -225,6 +230,7 @@ footer {
         textarea {
           width: 700px;
           height: 600px;
+          padding: 10px;
           font-size: 1rem;
           font-family: $text;
           background: $primair-background-color;

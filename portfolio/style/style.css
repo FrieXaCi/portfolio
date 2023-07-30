@@ -900,6 +900,7 @@ button {
   background-color: rgb(190, 41, 236);
   color: rgb(33, 21, 34);
   border-radius: 7px;
+  cursor: pointer;
 }
 
 footer {
@@ -908,6 +909,9 @@ footer {
   margin: 0.5rem auto;
   text-align: center;
   background-color: rgb(33, 21, 34);
+}
+footer :hover {
+  color: rgb(239, 187, 255);
 }
 
 .hide {
@@ -995,7 +999,7 @@ footer {
 }
 .homepage .main-title h1 {
   opacity: 0.7;
-  padding: 0 35px;
+  padding: 5px;
   margin: 10px auto;
   font-size: 2rem;
   color: rgb(33, 21, 34);
@@ -1040,7 +1044,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15px;
+  margin: 15px auto;
   width: 100%;
   height: auto;
   background-color: black;
@@ -1070,9 +1074,10 @@ footer {
   align-items: center;
 }
 .contact-page .form-container ul li input {
-  background: rgb(128, 0, 128);
+  padding: 5px;
+  background: rgb(190, 41, 236);
   color: rgb(33, 21, 34);
-  height: 2rem;
+  height: 2.2rem;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   width: 700px;
@@ -1080,6 +1085,7 @@ footer {
 .contact-page .form-container ul li textarea {
   width: 700px;
   height: 600px;
+  padding: 10px;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   background: rgb(33, 21, 34);
