@@ -240,6 +240,12 @@ footer {
     }
   }
 }
+.privacy-container {
+  margin: 5px;
+  padding: 10px;
+  background-color: $primair-background-color;
+  color: $tri-color;
+}
 //
 // mediaquerie mobile
 @media screen and (max-width: 480px) {
@@ -320,6 +326,9 @@ footer {
     padding: 5px;
     font-size: 0.8rem;
   }
+  .privacy-container {
+    font-size: 0.6em;
+  }
 }
 //
 // mediaquerie tablet
@@ -398,8 +407,14 @@ footer {
       }
     }
   }
-  footer {
-    padding: 5px;
-    font-size: 0.8rem;
+  .footer-container {
+    display: flex;
+    height: 100px;
+
+    footer {
+      height: 100px;
+      padding: 5px;
+      font-size: 0.8rem;
+    }
   }
 }
