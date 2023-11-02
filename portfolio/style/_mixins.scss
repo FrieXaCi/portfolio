@@ -5,7 +5,7 @@
 }
 
 @mixin transition {
-  transition: all ease-out 1.3s;
+  transition: all ease-out 0.5s;
 }
 @mixin background {
   background-image: url('../assets/homepage_amsterdam.jpg');

@@ -19,11 +19,11 @@ let gradient = bgCtx.createLinearGradient(
   backgroundCanvas.width,
   backgroundCanvas.height
 );
-gradient.addColorStop(0, 'rgb(239,187,255)');
-gradient.addColorStop(0.3, 'rgb(102,0,102)');
-gradient.addColorStop(0.6, 'rgb(190,41,236)');
-gradient.addColorStop(0.9, 'rgb(216,150,255)');
-gradient.addColorStop(0.12, 'rgb(128,0,128)');
+gradient.addColorStop(0, 'hsl(312, 94%, 49%)');
+gradient.addColorStop(0.3, 'hsl(327, 100%, 4%)');
+gradient.addColorStop(0.6, 'hsl(300, 92%, 24%)');
+gradient.addColorStop(0.9, 'hsl(330, 100%, 80%)');
+gradient.addColorStop(0.12, 'hsl(300, 100%, 25%)');
 
 // Your code - Background
 class Symbols {
@@ -84,7 +84,7 @@ function animateBackground(timeStamp) {
   bgLastTime = timeStamp;
 
   if (bgTimer > bgNextFrame) {
-    bgCtx.fillStyle = 'rgba(0,0,0, 0.05)';
+    bgCtx.fillStyle = 'hsla(0, 0%, 0%, 0.051)';
     bgCtx.fillRect(0, 0, backgroundCanvas.width, backgroundCanvas.height);
     bgCtx.fillStyle = gradient;
     bgCtx.font = bgEffect.fontSize + 'px monospace';
@@ -124,7 +124,7 @@ class MatrixText {
 
   draw() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.ctx.fillStyle = 'rgb(239, 187, 255)';
+    this.ctx.fillStyle = 'hsl(340, 100%, 90%)';
     this.ctx.font = `${this.fontSize}px monospace`;
 
     for (let i = 0; i < this.rows; i++) {
@@ -165,6 +165,8 @@ const words = [
   'XaCi',
   'development',
   'frontend',
+  'vue',
+  'pinia',
 ];
 
 const matrixText = new MatrixText(foregroundCanvas, words);

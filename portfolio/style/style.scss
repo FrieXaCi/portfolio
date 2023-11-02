@@ -125,7 +125,6 @@ footer {
   background: linear-gradient(
     to right,
     $primair-background-color 5%,
-
     $tri-background-color 80%,
     $secund-color 20%,
     $primair-color 25%
@@ -168,6 +167,7 @@ footer {
 .subtitle {
   font-size: 2rem;
 }
+
 //see triangle scss in seperate file
 .skills-page {
   @include container;
@@ -295,6 +295,7 @@ footer {
       }
     }
   }
+
   .contact-page {
     h2 {
       font-size: 0.8rem;
@@ -380,6 +381,7 @@ footer {
       }
     }
   }
+
   .contact-page {
     h2 {
       font-size: 0.9rem;
