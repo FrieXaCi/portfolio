@@ -404,6 +404,12 @@
   justify-content: center;
   height: 100vh;
 }
+.portfolio-page a {
+  color: hsl(327, 100%, 4%);
+}
+.portfolio-page a:hover {
+  color: hsl(330, 100%, 80%);
+}
 .portfolio-page .card-items {
   position: relative;
   width: 600px;

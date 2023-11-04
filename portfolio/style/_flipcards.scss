@@ -5,7 +5,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-
+  a {
+    color: $primair-background-color;
+  }
+  a:hover {
+    color: $tri-color;
+  }
   .card-items {
     position: relative;
     width: 600px;
