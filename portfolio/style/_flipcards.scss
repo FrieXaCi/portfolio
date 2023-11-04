@@ -405,7 +405,7 @@
 
       .item1 {
         @include portfolio-items-small;
-        background: $tri-background-color;
+        background: $primair-background-color;
       }
       .item2 {
         @include portfolio-items-small;
@@ -421,18 +421,23 @@
       }
       .item5 {
         @include portfolio-items-small;
+        background: $primair-background-color;
       }
       .item6 {
         @include portfolio-items-small;
+        background: $secund-background-color;
       }
       .item7 {
         @include portfolio-items-small;
+        background: $tri-color;
       }
       .item8 {
         @include portfolio-items-small;
+        background: $secund-background-color;
       }
       .item9 {
         @include portfolio-items-small;
+        background: $primair-background-color;
       }
     }
   }

@@ -1,0 +1,152 @@
+.project-container {
+  margin-top: 50px;
+  width: 80%;
+  height: auto;
+  display: flex;
+  .page-title {
+    font-size: 1rem;
+  }
+  .card-container {
+    margin: 20px auto;
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  // show info when clicked on button
+  .show-info {
+    margin: 10px;
+    padding: 20px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background: $tri-background-color;
+    .icon-container {
+      margin: 10px auto;
+      padding: 20px;
+      display: flex;
+      i {
+        margin-left: 20px;
+      }
+    }
+  }
+  .card-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include portfolio-items;
+    background: $tri-background-color;
+  }
+  .card-2 {
+    @include portfolio-items;
+    background: $primair-color;
+  }
+  .card-3 {
+    @include portfolio-items;
+    background: $primair-background-color;
+  }
+  .card-4 {
+    @include portfolio-items;
+    background: $secund-color;
+  }
+  .card-5 {
+    @include portfolio-items;
+    background: $primair-background-color;
+  }
+  .card-6 {
+    @include portfolio-items;
+    background: $secund-background-color;
+  }
+  .card-7 {
+    @include portfolio-items;
+    background: $tri-color;
+  }
+  .card-8 {
+    @include portfolio-items;
+    background: $secund-background-color;
+  }
+  .card-9 {
+    @include portfolio-items;
+    background: $primair-color;
+  }
+
+  .animate {
+    &:hover img {
+      border-radius: 50%;
+      scale: 2.5;
+      @include transition;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-other-pages {
+    padding-left: 15px;
+    i {
+      font-size: 15px;
+      margin-right: 1.5rem;
+    }
+  }
+  .project-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    .card-info {
+      width: 280px;
+      height: 300px;
+      p {
+        font-size: 6px;
+      }
+      button {
+        width: 50px;
+        font-size: 8px;
+      }
+    }
+    .card-container {
+      width: 340px;
+      height: 350px;
+      padding-bottom: 20px;
+      border-bottom: 2px dotted $primair-background-color;
+      .card-1 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .card-2 {
+        @include portfolio-items-small;
+        background: $primair-color;
+      }
+      .card-3 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .card-4 {
+        @include portfolio-items-small;
+        background: $secund-color;
+      }
+      .card-5 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .card-6 {
+        @include portfolio-items-small;
+        background: $secund-background-color;
+      }
+      .card-7 {
+        @include portfolio-items-small;
+        background: $tri-color;
+      }
+      .card-8 {
+        @include portfolio-items-small;
+        background: $secund-background-color;
+      }
+      .card-9 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+    }
+  }
+}

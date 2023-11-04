@@ -46,9 +46,9 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(60deg, hsl(330, 100%, 15%) 25%, hsl(327, 100%, 4%) 75%);
-  color: hsl(312, 94%, 49%);
-  text-shadow: 1px 1px 2px hsl(312, 94%, 49%);
+  background: linear-gradient(60deg, hsl(313, 92%, 24%) 25%, hsl(327, 100%, 4%) 75%);
+  color: hsl(322, 92%, 56%);
+  text-shadow: 1px 1px 2px hsl(322, 92%, 56%);
 }
 .navbar-container.show .menu-nav .nav-item:nth-child(1) {
   transition-delay: 0.2s;
@@ -64,6 +64,9 @@
 }
 .navbar-container.show .menu-nav .nav-item:nth-child(5) {
   transition-delay: 1s;
+}
+.navbar-container.show .menu-nav .nav-item:nth-child(6) {
+  transition-delay: 1.2s;
 }
 .navbar-container .menu-nav {
   list-style: none;
@@ -445,7 +448,7 @@
 .portfolio-page .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px dotted hsl(312, 94%, 49%);
+  border-left: 3px dotted hsl(322, 92%, 56%);
 }
 .portfolio-page .front h2 {
   margin-top: 30px;
@@ -537,7 +540,7 @@
   margin: 5px;
   width: 190px;
   height: 190px;
-  background: hsl(312, 94%, 49%);
+  background: hsl(322, 92%, 56%);
 }
 .portfolio-page .back-content .item3 {
   margin: 5px;
@@ -561,7 +564,7 @@
   margin: 5px;
   width: 190px;
   height: 190px;
-  background: hsl(300, 92%, 24%);
+  background: hsl(313, 92%, 24%);
 }
 .portfolio-page .back-content .item7 {
   margin: 5px;
@@ -573,13 +576,13 @@
   margin: 5px;
   width: 190px;
   height: 190px;
-  background: hsl(300, 92%, 24%);
+  background: hsl(313, 92%, 24%);
 }
 .portfolio-page .back-content .item9 {
   margin: 5px;
   width: 190px;
   height: 190px;
-  background: hsl(312, 94%, 49%);
+  background: hsl(322, 92%, 56%);
 }
 .portfolio-page .flipped .front,
 .portfolio-page .flipped .back {
@@ -633,7 +636,7 @@
     transition: all ease-out 0.5s;
   }
   .portfolio-page .front {
-    border-left: 2px dotted hsl(312, 94%, 49%);
+    border-left: 2px dotted hsl(322, 92%, 56%);
   }
   .portfolio-page .front h2 {
     margin-top: 10px;
@@ -700,7 +703,7 @@
     margin: 2px;
     width: 95px;
     height: 95px;
-    background: hsl(312, 94%, 49%);
+    background: hsl(322, 92%, 56%);
   }
   .portfolio-page .back-content .item3 {
     margin: 2px;
@@ -724,7 +727,7 @@
     margin: 2px;
     width: 95px;
     height: 95px;
-    background: hsl(300, 92%, 24%);
+    background: hsl(313, 92%, 24%);
   }
   .portfolio-page .back-content .item7 {
     margin: 2px;
@@ -736,7 +739,7 @@
     margin: 2px;
     width: 95px;
     height: 95px;
-    background: hsl(300, 92%, 24%);
+    background: hsl(313, 92%, 24%);
   }
   .portfolio-page .back-content .item9 {
     margin: 2px;
@@ -766,7 +769,7 @@
   .portfolio-page .front {
     z-index: 1;
     backface-visibility: hidden;
-    border-left: 2px dotted hsl(312, 94%, 49%);
+    border-left: 2px dotted hsl(322, 92%, 56%);
   }
   .portfolio-page .front h2 {
     margin-top: 10px;
@@ -814,13 +817,13 @@
     margin: 2px;
     width: 95px;
     height: 95px;
-    background: hsl(340, 100%, 90%);
+    background: hsl(327, 100%, 4%);
   }
   .portfolio-page .back-content .item2 {
     margin: 2px;
     width: 95px;
     height: 95px;
-    background: hsl(312, 94%, 49%);
+    background: hsl(322, 92%, 56%);
   }
   .portfolio-page .back-content .item3 {
     margin: 2px;
@@ -838,26 +841,216 @@
     margin: 2px;
     width: 95px;
     height: 95px;
+    background: hsl(327, 100%, 4%);
   }
   .portfolio-page .back-content .item6 {
     margin: 2px;
     width: 95px;
     height: 95px;
+    background: hsl(313, 92%, 24%);
   }
   .portfolio-page .back-content .item7 {
     margin: 2px;
     width: 95px;
     height: 95px;
+    background: hsl(330, 100%, 80%);
   }
   .portfolio-page .back-content .item8 {
     margin: 2px;
     width: 95px;
     height: 95px;
+    background: hsl(313, 92%, 24%);
   }
   .portfolio-page .back-content .item9 {
     margin: 2px;
     width: 95px;
     height: 95px;
+    background: hsl(327, 100%, 4%);
+  }
+}
+.project-container {
+  margin-top: 50px;
+  width: 80%;
+  height: auto;
+  display: flex;
+}
+.project-container .page-title {
+  font-size: 1rem;
+}
+.project-container .card-container {
+  margin: 20px auto;
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.project-container .show-info {
+  margin: 10px;
+  padding: 20px;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background: hsl(340, 100%, 90%);
+}
+.project-container .show-info .icon-container {
+  margin: 10px auto;
+  padding: 20px;
+  display: flex;
+}
+.project-container .show-info .icon-container i {
+  margin-left: 20px;
+}
+.project-container .card-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(340, 100%, 90%);
+}
+.project-container .card-2 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(322, 92%, 56%);
+}
+.project-container .card-3 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(327, 100%, 4%);
+}
+.project-container .card-4 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(330, 100%, 15%);
+}
+.project-container .card-5 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(327, 100%, 4%);
+}
+.project-container .card-6 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(313, 92%, 24%);
+}
+.project-container .card-7 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(330, 100%, 80%);
+}
+.project-container .card-8 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(313, 92%, 24%);
+}
+.project-container .card-9 {
+  margin: 5px;
+  width: 190px;
+  height: 190px;
+  background: hsl(322, 92%, 56%);
+}
+.project-container .animate:hover img {
+  border-radius: 50%;
+  scale: 2.5;
+  transition: all ease-out 0.5s;
+}
+
+@media screen and (max-width: 480px) {
+  .header-other-pages {
+    padding-left: 15px;
+  }
+  .header-other-pages i {
+    font-size: 15px;
+    margin-right: 1.5rem;
+  }
+  .project-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-container .card-info {
+    width: 280px;
+    height: 300px;
+  }
+  .project-container .card-info p {
+    font-size: 6px;
+  }
+  .project-container .card-info button {
+    width: 50px;
+    font-size: 8px;
+  }
+  .project-container .card-container {
+    width: 340px;
+    height: 350px;
+    padding-bottom: 20px;
+    border-bottom: 2px dotted hsl(327, 100%, 4%);
+  }
+  .project-container .card-container .card-1 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(327, 100%, 4%);
+  }
+  .project-container .card-container .card-2 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(322, 92%, 56%);
+  }
+  .project-container .card-container .card-3 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(327, 100%, 4%);
+  }
+  .project-container .card-container .card-4 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(330, 100%, 15%);
+  }
+  .project-container .card-container .card-5 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(327, 100%, 4%);
+  }
+  .project-container .card-container .card-6 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(313, 92%, 24%);
+  }
+  .project-container .card-container .card-7 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(330, 100%, 80%);
+  }
+  .project-container .card-container .card-8 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(313, 92%, 24%);
+  }
+  .project-container .card-container .card-9 {
+    margin: 2px;
+    width: 95px;
+    height: 95px;
+    background: hsl(327, 100%, 4%);
   }
 }
 * {
@@ -877,13 +1070,13 @@ body {
   height: auto;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: hsl(312, 94%, 49%);
-  background: linear-gradient(60deg, hsl(330, 100%, 80%) 10%, hsl(312, 94%, 49%) 20%, hsl(327, 100%, 4%) 75%);
+  color: hsl(322, 92%, 56%);
+  background: linear-gradient(60deg, hsl(330, 100%, 80%) 10%, hsl(322, 92%, 56%) 20%, hsl(327, 100%, 4%) 75%);
 }
 
 a {
   text-decoration: none;
-  color: hsl(312, 94%, 49%);
+  color: hsl(322, 92%, 56%);
 }
 
 a:hover {
@@ -894,7 +1087,7 @@ button {
   margin: 20px;
   width: 100px;
   padding: 5px 8px;
-  background-color: hsl(312, 94%, 49%);
+  background-color: hsl(322, 92%, 56%);
   color: hsl(327, 100%, 4%);
   border-radius: 7px;
   cursor: pointer;
@@ -902,10 +1095,13 @@ button {
 
 footer {
   width: 100%;
-  height: 2rem;
-  margin: 0.5rem auto;
+  height: 1rem;
+  margin: auto;
   text-align: center;
-  background-color: hsl(327, 100%, 4%);
+  font-size: 0.7rem;
+}
+footer a {
+  color: hsl(327, 100%, 4%);
 }
 footer :hover {
   color: hsl(330, 100%, 80%);
@@ -970,6 +1166,16 @@ footer :hover {
   letter-spacing: 1.5px;
 }
 
+.header-other-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.header-other-pages i {
+  font-size: 36px;
+}
+
 .page-title {
   margin: 15px auto;
   width: 100%;
@@ -977,7 +1183,7 @@ footer :hover {
   text-align: center;
   font-style: italic;
   font-size: 3rem;
-  background: linear-gradient(to right, hsl(327, 100%, 4%) 5%, hsl(340, 100%, 90%) 80%, hsl(330, 100%, 15%) 20%, hsl(312, 94%, 49%) 25%);
+  background: linear-gradient(to right, hsl(327, 100%, 4%) 5%, hsl(340, 100%, 90%) 80%, hsl(330, 100%, 15%) 20%, hsl(322, 92%, 56%) 25%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -1072,7 +1278,7 @@ footer :hover {
 }
 .contact-page .form-container ul li input {
   padding: 5px;
-  background: hsl(312, 94%, 49%);
+  background: hsl(322, 92%, 56%);
   color: hsl(327, 100%, 4%);
   height: 2.2rem;
   font-size: 1rem;
@@ -1086,14 +1292,16 @@ footer :hover {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   background: hsl(327, 100%, 4%);
-  color: hsl(312, 94%, 49%);
+  color: hsl(322, 92%, 56%);
 }
 
 .privacy-container {
+  width: 60%;
   margin: 5px;
   padding: 10px;
   background-color: hsl(327, 100%, 4%);
   color: hsl(330, 100%, 80%);
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1122,6 +1330,8 @@ footer :hover {
   }
   .homepage .main-title h1 {
     margin: 5px;
+    padding: 0;
+    padding-bottom: 10px;
     font-size: 0.8rem;
   }
   .page-title {
@@ -1172,6 +1382,7 @@ footer :hover {
     font-size: 0.8rem;
   }
   .privacy-container {
+    width: 80%;
     font-size: 0.6em;
   }
 }
