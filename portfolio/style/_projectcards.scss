@@ -23,7 +23,9 @@
     height: 600px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: $tri-background-color;
+
     .icon-container {
       margin: 10px auto;
       padding: 20px;
@@ -82,13 +84,6 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .header-other-pages {
-    padding-left: 15px;
-    i {
-      font-size: 15px;
-      margin-right: 1.5rem;
-    }
-  }
   .project-container {
     width: 100%;
     margin: 10px auto;
@@ -101,7 +96,83 @@
       p {
         font-size: 6px;
       }
+      .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+      }
       button {
+        margin: 5px;
+        width: 50px;
+        font-size: 8px;
+      }
+    }
+    .card-container {
+      width: 340px;
+      height: 350px;
+      padding-bottom: 20px;
+      border-bottom: 2px dotted $primair-background-color;
+      .card-1 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .card-2 {
+        @include portfolio-items-small;
+        background: $primair-color;
+      }
+      .card-3 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .card-4 {
+        @include portfolio-items-small;
+        background: $secund-color;
+      }
+      .card-5 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+      .card-6 {
+        @include portfolio-items-small;
+        background: $secund-background-color;
+      }
+      .card-7 {
+        @include portfolio-items-small;
+        background: $tri-color;
+      }
+      .card-8 {
+        @include portfolio-items-small;
+        background: $secund-background-color;
+      }
+      .card-9 {
+        @include portfolio-items-small;
+        background: $primair-background-color;
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
+  .project-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    .card-info {
+      width: 280px;
+      height: 300px;
+      p {
+        font-size: 6px;
+      }
+      .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+      }
+      button {
+        margin: 5px;
         width: 50px;
         font-size: 8px;
       }
