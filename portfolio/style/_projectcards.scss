@@ -152,7 +152,7 @@
     }
   }
 }
-@media screen and (min-width: 481px) and (max-width: 980px) or (orientation: landscape) {
+@media screen and (min-width: 481px) and (max-width: 980px) and (orientation: landscape) {
   .project-container {
     width: 100%;
     margin: 10px auto;

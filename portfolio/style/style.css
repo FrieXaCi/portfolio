@@ -168,7 +168,8 @@
   opacity: 0.3;
   background-repeat: no-repeat;
   shape-outside: polygon(100% 100%, 100% 0, 0 0);
-  clip-path: polygon(100% 100%, 100% 0, 0 0);
+  -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+          clip-path: polygon(100% 100%, 100% 0, 0 0);
   z-index: -1;
 }
 .about-container-screen .container .clipped-text-about-left {
@@ -189,7 +190,6 @@
   float: left;
   width: 80%;
   height: 560px;
-  -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%);
   shape-outside: polygon(0 0, 0 100%, 100% 100%);
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
   clip-path: polygon(0 0, 0 100%, 100% 100%);
@@ -261,7 +261,8 @@
     opacity: 0.3;
     background-repeat: no-repeat;
     shape-outside: polygon(100% 100%, 100% 0, 0 0);
-    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+            clip-path: polygon(100% 100%, 100% 0, 0 0);
     z-index: -1;
   }
   .about-container-mobile .container .clipped-text-about {
@@ -282,7 +283,6 @@
     float: left;
     width: 80%;
     height: 260px;
-    -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%);
     shape-outside: polygon(0 0, 0 100%, 100% 100%);
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
     clip-path: polygon(0 0, 0 100%, 100% 100%);
@@ -326,7 +326,8 @@
     opacity: 0.3;
     background-repeat: no-repeat;
     shape-outside: polygon(100% 100%, 100% 0, 0 0);
-    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+            clip-path: polygon(100% 100%, 100% 0, 0 0);
     z-index: -1;
   }
   .about-container-screen .container .clipped-text-about-left {
@@ -347,7 +348,6 @@
     float: left;
     width: 80%;
     height: 660px;
-    -webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%);
     shape-outside: polygon(0 0, 0 100%, 100% 100%);
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
     clip-path: polygon(0 0, 0 100%, 100% 100%);
