@@ -13,15 +13,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Bericht: " . $bericht . "\n";
 
     if (mail($to, $subject, $message)) {
+        header("refresh:3;url=https://www.xaci-development.com/");
              echo '<h1>Bedankt!</h1>';
         echo '<p>Je bericht is succesvol verzonden.</p>';
         echo '<p>We nemen zo snel mogelijk contact met je op.</p>';
-               header("refresh:3;url=https://www.xaci-development.com/");
+             
         exit();
     } else {
+        header("refresh:3;url=https://www.xaci-development.com/");
              echo '<h1>Fout!</h1>';
         echo '<p>Er is een fout opgetreden bij het verzenden van je bericht. Probeer het later opnieuw.</p>';
-               header("refresh:3;url=https://www.xaci-development.com/");
+              
         exit();
     }
 }
